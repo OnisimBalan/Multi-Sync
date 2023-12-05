@@ -1,0 +1,13 @@
+package MasterSyncIO.MSync;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MasterSyncApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MasterSyncApplication.class, args);
+	}
+
+}
