@@ -1,19 +1,6 @@
 <template>
-  <q-page class="row justify-evenly" style="padding: 5px">
+  <q-page class="row justify-evenly">
     <q-tabs v-model="tab" vertical>
-      <div style="margin-left: 15px; margin-top: 15px">
-        <q-select
-          filled
-          v-model="model"
-          label="Search"
-          color="primary"
-          :options="search"
-          style="width: 500px"
-          behavior="menu"
-          outlined
-        />
-      </div>
-
       <main-project></main-project>
     </q-tabs>
   </q-page>
@@ -23,15 +10,6 @@
 import { Todo, Meta } from 'components/models';
 import MainProject from 'components/MainProject.vue';
 import { defineComponent, ref } from 'vue';
-
-const filters = ['Footbal', 'Date', 'School', 'Shopping', 'Fitness'];
-const search = [
-  'Footbal team timisoara',
-  'Date online',
-  'School books',
-  'Shopping in town',
-  'Fitness gym',
-];
 
 export default defineComponent({
   name: 'IndexPage',
@@ -67,9 +45,7 @@ export default defineComponent({
       meta,
       model: ref(null),
       modelMultiple: ref(null),
-      search,
       tab: ref('mails'),
-      filters,
     };
   },
 });
